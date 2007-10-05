@@ -33,7 +33,7 @@ testallocate(megabytes)
             for(i = 0;i < 1024;i++) {
                 mem[i] = malloc(1024*1024);
                 if (mem[i] == NULL) {
-                    warnx("Internal error: %d Megabytes already allocated",megallocated);
+                    warnx("Error while allocating memory! %d Megabytes already allocated",megallocated);
                     break;
                 }
                 megallocated += 1;

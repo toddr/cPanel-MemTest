@@ -11,7 +11,7 @@ use Exporter ();
 @ISA = qw(Exporter DynaLoader);
 @EXPORT_OK = qw(testallocate);
 
-$VERSION = '0.0.1';
+$VERSION = '0.0.2';
 
 bootstrap cPanel::MemTest $VERSION;
 
@@ -25,7 +25,7 @@ cPanel::MemTest - Test Memory Allocation
 
 =head1 VERSION
 
-This document describes cPanel::MemTest version 0.0.1
+This document describes cPanel::MemTest version 0.0.2
 
 =head1 SYNOPSIS
 
@@ -59,9 +59,9 @@ If they are not the same then the allocation had issues ( see SYNOPSIS )
 
 Invalid argument was passed to testallocate() (IE it is not 1 .. 1024)
 
-=item C<< Internal error: %d Megabytes already allocated >>
+=item C<< Error while allocating memory! %d Megabytes already allocated >>
 
-This should never happen, please submit a bug report ASAP with the cirumstances and environment info. Thanks!
+There was not enough free memory left to allocate the amount you requested.
 
 =back
 
