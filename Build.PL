@@ -3,7 +3,7 @@ use warnings;
 use Module::Build;
 
 my $builder = Module::Build->new(
-    dist_name           => 'cPanel::MemTest',
+    module_name         => 'cPanel::MemTest',
     author              => 'Daniel Muey <dmuey@cpan.org>',
     dist_version_from   => 'lib/cPanel/MemTest.pm',
     license             => 'perl',
