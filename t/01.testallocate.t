@@ -1,9 +1,17 @@
-use Test::More tests => 3;
+use Test::More tests => 5;
 
 use cPanel::MemTest qw(testallocate);
+use Test::Warn;
 
 diag( "Testing cPanel::MemTest $cPanel::MemTest::VERSION" );
 
-ok( testallocate(100) == 100, 'simple allocate');
-ok( !testallocate(0),    'MB too low');
-ok( !testallocate(1025), 'MB too high');
+is( testallocate(100),  100, 'simple allocate');
+is(alloc_with_warn(0),    0, 'Error on allocating no memory');
+is(alloc_with_warn(1025), 0, 'Max mem to alloc is 1024 Meg.');
+
+sub alloc_with_warn {
+  my $size = shift;
+  my $got; 
+  warning_is {$got = testallocate($size)} "Unable to allocate $size Megabytes of memory (Invalid Argument)", "warning message complains about bad values";
+  return $got;
+}
