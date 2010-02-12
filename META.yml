@@ -1,11 +1,22 @@
-# http://module-build.sourceforge.net/META-spec.html
-#XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
-name:         cPanel-MemTest
-version:      0.0.2
-version_from: lib/cPanel/MemTest.pm
-installdirs:  site
-requires:
-    Test::More:                    0
-
-distribution_type: module
-generated_by: ExtUtils::MakeMaker version 6.17
+---
+abstract: 'Test Memory Allocation'
+author: []
+build_requires:
+  ExtUtils::CBuilder: 0
+  Module::Build: 0.3603
+  Test::More: 0.40
+configure_requires:
+  Module::Build: 0.36
+generated_by: 'Module::Build version 0.3603'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: cPanel::MemTest
+provides:
+  cPanel::MemTest:
+    file: lib/cPanel/MemTest.pm
+    version: v0.0.3
+resources:
+  license: http://dev.perl.org/licenses/
+version: v0.0.3

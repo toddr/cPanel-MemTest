@@ -3,9 +3,9 @@ Changes
 MANIFEST
 META.yml # Will be created by "make dist"
 Makefile.PL
-MemTest.xs
 README
 lib/cPanel/MemTest.pm
+lib/cPanel/MemTest.xs
 t/00.load.t
 t/01.testallocate.t
 t/perlcritic.t

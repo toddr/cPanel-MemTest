@@ -11,7 +11,7 @@ use Exporter ();
 @ISA = qw(Exporter DynaLoader);
 @EXPORT_OK = qw(testallocate);
 
-$VERSION = '0.0.2';
+$VERSION = '0.0.3';
 
 bootstrap cPanel::MemTest $VERSION;
 

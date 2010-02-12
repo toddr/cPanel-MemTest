@@ -1,5 +1,8 @@
 Revision history for cPanel-MemTest
 
+0.0.3 Fri Feb 12 2010
+    RT 41691 - Build.PL does not work as expected. 
+
 0.0.2  Fri Oct  5 14:36:43 2007
       clarified warning thrown when memory runs out
 
