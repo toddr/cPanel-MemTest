@@ -27,13 +27,13 @@ testallocate(megabytes)
         
         CODE:
         if (megabytes > 1024 || megabytes < 1) {
-            warnx("Unable to allocate %d Megabytes of memory (Invalid Argument)",megabytes);
+            warn("Unable to allocate %d Megabytes of memory (Invalid Argument)",megabytes);
             RETVAL = 0;
         } else {
             for(i = 0;i < 1024;i++) {
                 mem[i] = malloc(1024*1024);
                 if (mem[i] == NULL) {
-                    warnx("Error while allocating memory! %d Megabytes already allocated",megallocated);
+                    warn("Error while allocating memory! %d Megabytes already allocated",megallocated);
                     break;
                 }
                 megallocated += 1;

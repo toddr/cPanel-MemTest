@@ -1,9 +1,12 @@
-use Test::More tests => 5;
-
-use cPanel::MemTest qw(testallocate);
+use Test::More tests => 6;
 use Test::Warn;
 
+BEGIN {
+    use_ok('cPanel::MemTest', 'testallocate');
+}
+
 diag( "Testing cPanel::MemTest $cPanel::MemTest::VERSION" );
+
 
 is( testallocate(100),  100, 'simple allocate');
 is(alloc_with_warn(0),    0, 'Error on allocating no memory');
